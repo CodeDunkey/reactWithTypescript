@@ -21,7 +21,7 @@ const TestButton2 = ({title, disabled}: TestButton2I)=>{
 }
 
 const TestButton3 = ()=>{
-    // is it a union?
+    // is it a union???
     type State = "idle" | "loading" | "succes" | "error";
     const [status, setStatus] = useState<State>("idle");
     
