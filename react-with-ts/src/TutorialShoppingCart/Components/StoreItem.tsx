@@ -5,6 +5,7 @@ type StoreItemProps = {
 
 export default function StoreItem({name, id}:StoreItemProps){
     return(
+        
         <div>{name} {id}</div>
     )
 }
