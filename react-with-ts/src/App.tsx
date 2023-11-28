@@ -1,13 +1,27 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import logo from './logo.svg';
+import Home from './TutorialShoppingCart/Pages/Home';
+import Store from './TutorialShoppingCart/Pages/Store';
+import About from './TutorialShoppingCart/Pages/About';
+import Navbar from './TutorialShoppingCart/Components/Navbar';
 import './App.css';
-import Main from './Page/Main';
-import HelloWorld from './TypescriptTutorialPackt/HelloWorld';
+
+
+import Main from './TutorialShoppingCart/Main';
+
 function App() {
   return (
     <div >
-      <Main />
-      <HelloWorld />
+      <>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/store' element={<Store/>} />
+        <Route path='/about' element={<About/>} />
+      </Routes>
+
+      </>
     </div>
   );
 }
