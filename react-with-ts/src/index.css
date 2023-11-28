@@ -1,5 +1,6 @@
 body {
-  margin: 40px;
+  margin: 0px;
+  padding: 0px;
 }
 /* padding: 10; */
 /* ;
@@ -10,9 +11,9 @@ body {
   -moz-osx-font-smoothing: grayscale; */
 
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
+} */
 
 

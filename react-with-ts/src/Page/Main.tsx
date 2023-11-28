@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import TypeScript from './Example1';
+import '../PageStylesSCSS/Main.scss'
 import ReducerFunction from './Example2';
 import ContentFunction from './Example3';
 import EnumFunction from './Example4';
@@ -47,23 +49,24 @@ const TestButton3 = ()=>{
 
 export default function Main(){
     return(
-        <div>
-            <h1>react with typescript</h1>
-            <h3>
-            <br/>* Interfaces
-            <br/>* Types
-            <br/>* Enum
-            <br/>* Union / intersection
-            <br/>* Type inference
-            <br/>* Typeguard
-            <br/>* Generics
-            </h3>
-            <TestButton1 title="Test 1"/> 
-            <br/><br/><TestButton2 title="Test 2" disabled={true}/>
-            <br/><br/><TestButton3/>
-            <ReducerFunction/>
-            <ContentFunction/>
-            <EnumFunction/>
+        <div className='main'>
+          <TypeScript />
         </div>
     )
 }
+//   <h1>react with typescript</h1>
+//             <h3>
+//             <br/>* Interfaces
+//             <br/>* Types
+//             <br/>* Enum
+//             <br/>* Union / intersection
+//             <br/>* Type inference
+//             <br/>* Typeguard
+//             <br/>* Generics
+//             </h3>
+//             <TestButton1 title="Test 1"/> 
+//             <br/><br/><TestButton2 title="Test 2" disabled={true}/>
+//             <br/><br/><TestButton3/>
+//             <ReducerFunction/>
+//             <ContentFunction/>
+//             <EnumFunction/>
