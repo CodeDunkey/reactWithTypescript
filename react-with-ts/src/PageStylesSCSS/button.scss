@@ -1,16 +1,17 @@
 .buttonclick{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: end;
     background-color:cadetblue;
     border: 0px;
     height: 20px;
-    width: 40px;
+    width: 80px;
 
     button{
-        height: 10px;
-        width: 10px;
+        
+        height: 20px;
+        width: 20px;
         border: 0px;
-        background-color: green;
+        background-color: red;
     }
 }

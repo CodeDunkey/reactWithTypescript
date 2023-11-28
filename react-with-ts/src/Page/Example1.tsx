@@ -26,11 +26,20 @@ const closeForm = ()=>{
     )
 }
 
+const Input1 = ()=>{
+    return(
+        <input placeholder='Type here:'></input>
+    )
+}
+
 export default function TypeScript(){
     return(
         <div>
             <h3>TypeScript <br/>Here you'll see an example of </h3>
-            <button className="buttonclick" onClick={()=>openForm()}> <button onClick={()=>closeForm()}></button></button>
+            <Input1 />
+            <button className="buttonclick" onClick={()=>openForm()}>Open 
+                <button onClick={()=>closeForm()}>X</button>
+            </button>
         </div>
     )
 }
