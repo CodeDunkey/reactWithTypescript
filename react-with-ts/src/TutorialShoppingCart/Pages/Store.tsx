@@ -1,3 +1,4 @@
+
 import StoreItem from '../Components/StoreItem'
 import storeItems from '../Data/items.json'
 export default function Store(){

@@ -1,18 +1,23 @@
+
 [
     {
         "name": "Boots",
         "id": 1
+        
     },
     {
         "name": "Pants",
         "id": 2
+        
     },
     {
         "name": "Jackets",
         "id": 3
+        
     },
     {
         "name": "Gloves",
         "id": 4
+        
     }
 ]
