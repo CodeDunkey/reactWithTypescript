@@ -8,25 +8,29 @@ import Navbar from './TutorialShoppingCart/Components/Navbar';
 import './App.css';
 import Main from './TutorialShoppingCart/Main';
 import { ShoppingCartProvider } from './TutorialShoppingCart/Context/ShoppingCartContext';
+import Project from './Project/NewProject';
 
 function App() {
   return (
     <div >
       <>
-      <ShoppingCartProvider>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home/>} />
-        <Route path='/store' element={<Store/>} />
-        <Route path='/about' element={<About/>} />
-      </Routes>
-      </ShoppingCartProvider>
+        <Project />
       </>
     </div>
   );
 }
 
 export default App;
+
+{/* <ShoppingCartProvider>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/store' element={<Store/>} />
+        <Route path='/about' element={<About/>} />
+      </Routes>
+      </ShoppingCartProvider> */}
+
 
 // className="App"
 
