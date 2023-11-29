@@ -7,18 +7,40 @@
     width: 300px;
 }
 
-.itemInfo{
+.itemImage{
+
+    // border: 1px solid black;
     background-color: lightgrey;
     // border: 1px solid blue;
     height: 50%;
     width: 100%;
 }
 
-.itemToCart{
-
-    background-color:lightblue;
+.itemInfo{
+    background-color: lightslategrey;
     // border: 1px solid blue;
-    width: 100%;
-
+    display:flex;
+    flex-direction: column;
     height: 50%;
+}
+
+.itemNameId{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // border: 1px solid yellow;
+    height: 50%;
+}
+
+.itemToCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid green;
+    height: 50%;
+}
+
+.addToCartButton{
+    
+    height: 30px;
 }

@@ -6,21 +6,21 @@ import Store from './TutorialShoppingCart/Pages/Store';
 import About from './TutorialShoppingCart/Pages/About';
 import Navbar from './TutorialShoppingCart/Components/Navbar';
 import './App.css';
-
-
 import Main from './TutorialShoppingCart/Main';
+import { ShoppingCartProvider } from './TutorialShoppingCart/Context/ShoppingCartContext';
 
 function App() {
   return (
     <div >
       <>
+      <ShoppingCartProvider>
       <Navbar />
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/store' element={<Store/>} />
         <Route path='/about' element={<About/>} />
       </Routes>
-
+      </ShoppingCartProvider>
       </>
     </div>
   );

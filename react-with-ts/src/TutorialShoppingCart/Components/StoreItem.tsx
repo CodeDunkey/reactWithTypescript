@@ -1,23 +1,66 @@
+import { useState } from 'react'
 import '../StyleSCSS/StoreItem.scss'
 
 type StoreItemProps = {
     name: string
     id: number
-    
+    imgUrl: string
 }
 
-export default function StoreItem({name, id}:StoreItemProps){
+export default function StoreItem({name, id, imgUrl}:StoreItemProps){
+    const [quantity, setQuantity] = useState(0);
+    
+    console.log("quantity: ",quantity);
+
+    const showAddToCart = ()=>{
+         if(quantity === 0){
+            return(
+            <button className='addToCartButton' onClick={()=>addQuantity()}>Add to cart</button>
+            )
+        }
+        if(quantity > 0){
+            return(
+                <div >
+                    <button onClick={()=>addQuantity()}>+</button>{quantity} in cart
+                    <button onClick={()=>lowerQuantity()}>-</button>
+                </div>
+            )
+        }
+    }
+
+    const addQuantity = ()=>{
+        let addToQuantity = quantity;
+        addToQuantity += 1;
+        setQuantity(addToQuantity);
+        console.log("it works");
+        
+    }
+    
+    const lowerQuantity = ()=>{
+        let lowerQuantity = quantity;
+        lowerQuantity -= 1;
+        setQuantity(lowerQuantity);
+    }
+
+    console.log("quantity: ",quantity);
+    
     return(
         <div className='itemWrapper'>
-            <div className='itemInfo' > 
+            <div className='itemImage'> 
+                <img src={imgUrl}></img>
             </div>
             
-            <div className='itemToCart'>
-                <h3>{name}</h3>
-                <h3>{id}</h3>
+            <div className='itemInfo'>
+                <div className='itemNameId'>
+                    <h3>{name}</h3>
+                    <h3>{id}</h3>
+                </div>
+                <div className='itemToCart'>
+                        {showAddToCart()}
+                </div>
             </div>
         </div>
     )
 }
 
-//style={{backgroundImage: `url(${imgUrl})`, backgroundSize: "cover"}}
+// style={{backgroundImage: `url(${imgUrl})`, backgroundSize: "cover"}}

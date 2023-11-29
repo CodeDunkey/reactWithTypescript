@@ -14,12 +14,23 @@
     display: flex;
     justify-content: space-between;
 }
+
+.openCart{
+    background-color: lightseagreen;
+    width: 100px;
+    height: 100px;
+    // position: absolute;
+}
+
 .Link{
     
     text-decoration: none;
 }
 
 .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50px;
     width: 50px;
     border-radius: 50%;
