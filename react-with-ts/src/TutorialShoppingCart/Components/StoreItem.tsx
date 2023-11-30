@@ -7,10 +7,9 @@ type StoreItemProps = {
     name: string
     id: number
     imgUrl: string
-    imgSize: string
 }
 
-export default function StoreItem({name, id, imgUrl, imgSize}:StoreItemProps){
+export default function StoreItem({name, id, imgUrl}:StoreItemProps){
     const [quantity, setQuantity] = useState(0);
     
     console.log("quantity: ",quantity);
@@ -49,7 +48,7 @@ export default function StoreItem({name, id, imgUrl, imgSize}:StoreItemProps){
     
     return(
         <div className='itemWrapper'>
-            <div className='itemImage' style={{backgroundImage: `url(${imgUrl})`, backgroundSize: imgSize}}> 
+            <div className='itemImage' > 
                
             </div>
             
@@ -66,4 +65,4 @@ export default function StoreItem({name, id, imgUrl, imgSize}:StoreItemProps){
     )
 }
 
-// 
+// style={{backgroundImage: `url(${imgUrl})`, backgroundSize: imgSize}}
