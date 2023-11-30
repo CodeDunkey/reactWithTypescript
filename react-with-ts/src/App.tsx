@@ -9,19 +9,25 @@ import './App.css';
 // import Main from './TutorialShoppingCart/Main';
 import { ShoppingCartProvider } from './TutorialShoppingCart/Context/ShoppingCartContext';
 import Project from './Project/NewProject';
-import Main from './TutorialHangman/Main'
+// import Main from './TutorialHangman/Main'
+import Main from './TutorialFCC/Main';
+import ACar from './Types/Car';
 
 function App() {
   return (
     <div >
       <>
-        <Main />
+        <ACar />
       </>
     </div>
   );
 }
 
 export default App;
+
+
+
+// <Main />
 
 //  <Project />
 

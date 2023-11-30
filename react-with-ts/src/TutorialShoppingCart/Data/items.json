@@ -3,21 +3,25 @@
     {
         "name": "Boots",
         "id": 1,
-        "imgUrl": "../images/dice.png"
+        "imgUrl": "'../images/dice.png'",
+        "imgSize": "cover"
     },
     {
         "name": "Pants",
         "id": 2,
-        "imgUrl": "../images/dice.png"
+        "imgUrl": "'../images/dice.png'",
+        "imgSize": "cover"
     },
     {
         "name": "Jackets",
         "id": 3,
-        "imgUrl": "../images/dice.png"
+        "imgUrl": "'../images/dice.png'",
+        "imgSize": "cover"
     },
     {
         "name": "Gloves",
         "id": 4,
-        "imgUrl": "../images/dice.png"
+        "imgUrl": "'../images/dice.png'",
+        "imgSize": "cover"
     }
 ]

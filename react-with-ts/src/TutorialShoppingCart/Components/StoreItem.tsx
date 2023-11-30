@@ -1,13 +1,16 @@
+import dice from '../images/dice.png'
 import { useState } from 'react'
 import '../StyleSCSS/StoreItem.scss'
+import { Url } from 'url'
 
 type StoreItemProps = {
     name: string
     id: number
     imgUrl: string
+    imgSize: string
 }
 
-export default function StoreItem({name, id, imgUrl}:StoreItemProps){
+export default function StoreItem({name, id, imgUrl, imgSize}:StoreItemProps){
     const [quantity, setQuantity] = useState(0);
     
     console.log("quantity: ",quantity);
@@ -46,8 +49,8 @@ export default function StoreItem({name, id, imgUrl}:StoreItemProps){
     
     return(
         <div className='itemWrapper'>
-            <div className='itemImage'> 
-                <img src={imgUrl}></img>
+            <div className='itemImage' style={{backgroundImage: `url(${imgUrl})`, backgroundSize: imgSize}}> 
+               
             </div>
             
             <div className='itemInfo'>
@@ -63,4 +66,4 @@ export default function StoreItem({name, id, imgUrl}:StoreItemProps){
     )
 }
 
-// style={{backgroundImage: `url(${imgUrl})`, backgroundSize: "cover"}}
+// 
