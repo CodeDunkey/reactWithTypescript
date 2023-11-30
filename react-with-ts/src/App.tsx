@@ -6,21 +6,24 @@ import Store from './TutorialShoppingCart/Pages/Store';
 import About from './TutorialShoppingCart/Pages/About';
 import Navbar from './TutorialShoppingCart/Components/Navbar';
 import './App.css';
-import Main from './TutorialShoppingCart/Main';
+// import Main from './TutorialShoppingCart/Main';
 import { ShoppingCartProvider } from './TutorialShoppingCart/Context/ShoppingCartContext';
 import Project from './Project/NewProject';
+import Main from './TutorialHangman/Main'
 
 function App() {
   return (
     <div >
       <>
-        <Project />
+        <Main />
       </>
     </div>
   );
 }
 
 export default App;
+
+//  <Project />
 
 {/* <ShoppingCartProvider>
       <Navbar />

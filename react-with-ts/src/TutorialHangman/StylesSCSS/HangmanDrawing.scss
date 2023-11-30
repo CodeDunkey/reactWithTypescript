@@ -1,0 +1,57 @@
+.wrapper{
+    // border: 1px solid blue;
+    position: relative;
+}
+
+.dropDown{
+    height: 50px;
+    width: 10px;
+    background-color: black;
+    margin-left: 310px;
+    position: absolute;
+
+}
+
+.top{
+    height: 10px;
+    width: 200px;
+    margin-left: 120px;
+    background-color: black;
+}
+
+.middle{
+    height: 400px;
+    width: 10px;
+    background-color: black;
+    margin-left: 120px;
+}
+
+
+.bottom{
+    height: 10px;
+    width: 250px;
+    background-color: black;
+}
+
+.head{
+    height: 50px;
+    width: 50px;
+    border: 10px solid black;
+    border-radius: 100%;
+    position: absolute;
+    right: -30px;
+    top: 40px;
+}
+
+.upperBody{
+    height: 150px;
+    width: 10px;
+    background-color: black;
+    margin-left: 310px;
+    position: absolute;
+    top: 110px;
+}
+
+.rightArm{
+    
+}
