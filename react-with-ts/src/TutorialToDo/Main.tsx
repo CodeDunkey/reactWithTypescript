@@ -13,6 +13,7 @@ export default function ToDoApp(){
         <div className='wrapper'>
             <span className='header'>ToDo List</span>
             <InputField />
+            <InputField />
         </div>
     )
 }

@@ -36,17 +36,27 @@ interface A {
     age: number
 }
 
+type Aa = {
+    cPR: number
+    alive: boolean
+}
+
 interface B{
+    weight: number
+}
+
+type Bb = {
     height: number
 }
+
+type AnArray [ 
+    a:string,
+    
+]
 
 interface C extends A, B{
     yearOfBirth: number
 }
-
-const c: C = {name:"bob", yearOfBirth: 1990,  age: 100, height: 200} 
-console.log("c",c);
-const test = 3;
 
 // an intersection
 type D = A & B;
@@ -54,18 +64,47 @@ type D = A & B;
 // a union
 type E = A | B;
 
-const d: D = {name: "bo", age: 100, height: 200}
+const a: Aa = { cPR: 123, alive:true} 
 
-console.log("d", d.name);
+const b: Bb & B= {height: 300, weight: 300}
+
+const c: C = {name:"bob", yearOfBirth: 1990,  age: 100, weight: 200} 
+
+const d: D = {name: "bo", age: 100, weight: 200}
+
+const e: E = {weight: 200}
 
 console.log("container", container)
+console.log("a",a.alive, a.cPR);
+console.log("b",);
+console.log("c",c.yearOfBirth, c.name);
+console.log("d", d.name);
+console.log("e", e.weight);
+
 // console.log("", location)
 
+type AFunctionProps = {
+    subject1: string
+}
+
+type AFunction = ()=>{
+
+    
+
+
+}
+
+const AaFunction = ()=>{
+
+
+    const showList = document.getElementById("root");
+    const aSpan = document.createElement("span");
+    aSpan.textContent = "Typescript Interface Types Enum Union Intersection Type-inference Type-guard Generics";
+    showList?.appendChild(aSpan);
+}
+ 
+
 export default function Container(){
-   
-    return(
-        <div>
-            {test}{d.name}{c.yearOfBirth}{}{}{}{}
-        </div>
-    )
+  AaFunction();
+    
 }
