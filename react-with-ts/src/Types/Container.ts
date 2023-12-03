@@ -49,9 +49,7 @@ type Bb = {
     height: number
 }
 
-type AnArray [ 
-    a:string,
-    
+type AnArray = [ 
 ]
 
 interface C extends A, B{
