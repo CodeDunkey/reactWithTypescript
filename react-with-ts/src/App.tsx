@@ -14,6 +14,7 @@ import Project from './Project/NewProject';
 import ACar from './Types/Car';
 import ToDoApp from './TutorialToDo/Main';
 import Container from './Types/Container';
+import Animal from './Types/Animal';
 // 
 function App() {
   
@@ -22,6 +23,7 @@ function App() {
       <>
         <ToDoApp />
         {Container()}
+        {Animal()}
       </>
     </div>
   );

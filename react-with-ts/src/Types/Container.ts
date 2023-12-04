@@ -74,7 +74,7 @@ const e: E = {weight: 200}
 
 console.log("container", container)
 console.log("a",a.alive, a.cPR);
-console.log("b",);
+console.log("bjhjv");
 console.log("c",c.yearOfBirth, c.name);
 console.log("d", d.name);
 console.log("e", e.weight);
