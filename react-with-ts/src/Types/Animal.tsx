@@ -20,6 +20,9 @@ anArray.map(item => {
 class AClass {
     
 }
+
+const AaClass: AClass = {};
+
 const sym1 = Symbol("add");
 console.log("sym1",sym1)
 type array2 = Array<unknown>
@@ -45,6 +48,11 @@ interface primitiveTypes {
     propertyType5: void
     propertyType6: null
     propertyType7: undefined
+    a: class name {
+        constructor(parameters) {
+            
+        }
+    }
 }
 
 console.log("anArray",anArray)
