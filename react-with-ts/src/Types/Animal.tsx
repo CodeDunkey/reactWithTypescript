@@ -17,12 +17,14 @@ anArray.map(item => {
     console.log("item", item)
 })
 
-class AClass {
-    
-}
+class AClass {constructor(parameters: string) {
+    return parameters
+}}
 
-const AaClass: AClass = {};
+const AaClass: AClass = {para:"abc"}
+console.log("Aaclass", AaClass)
 
+console.log("type of class", typeof(AaClass))
 const sym1 = Symbol("add");
 console.log("sym1",sym1)
 type array2 = Array<unknown>
@@ -38,7 +40,7 @@ type withoutTypeCheching = any;
 
 type anyWithSomething = unknown;
 
-enum enumType {}
+enum enumType {a, b, c, d}
 
 interface primitiveTypes {
     propertyType1: number
@@ -48,11 +50,6 @@ interface primitiveTypes {
     propertyType5: void
     propertyType6: null
     propertyType7: undefined
-    a: class name {
-        constructor(parameters) {
-            
-        }
-    }
 }
 
 console.log("anArray",anArray)
@@ -64,3 +61,4 @@ export default function Animal(){
         </div>
     )
 }
+
