@@ -10,11 +10,15 @@ interface Car {
     model: string
 }
 
-let myCar: Car= {name: "Ford", model: "T"};
+let myCar: Car = {name: "Ford", model: "T"};
 type MyObject = Person | Car;
 
 
-console.log();
+type Unknown1 = unknown;
+let unknown1: Unknown1 = "abc";
+unknown1 = true;
+
+console.log("unknown1", unknown1);
 
 const isCar = (something: MyObject): something is Car => {
     if((something as Car).model !== undefined)return true 
@@ -26,9 +30,11 @@ const isPerson = (something: MyObject): something is Person => {
     return false
 }
 
-export default function MyFunction(para: MyObject){
+function Check1(para: MyObject){
     if(isCar(para))console.log(para.model)
     if(isPerson(para))console.log(para.age)
 }
 
-MyFunction(myPerson);
+export default function MyFunction(){
+    Check1(myCar);    
+}

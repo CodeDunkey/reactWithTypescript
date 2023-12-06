@@ -16,18 +16,16 @@ import ToDoApp from './TutorialToDo/Main';
 import Container from './Types/Container';
 import Animal from './Types/Animal';
 import MyFunction from './Types/some';
-import MainOut from './Types/MainOut';
-// 
+
 function App() {
   
   return (
     <div >
       <>
         {/* <ToDoApp /> */}
-        {/* {Container()} */}
-        {/* {Animal()} */}
-        {/* {MyFunction()} */}
-        {MainOut()}
+        {Container()}
+        {Animal()}
+        {MyFunction()}
       </>
     </div>
   );
