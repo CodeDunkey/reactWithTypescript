@@ -12,9 +12,9 @@ type B = A & {
     c: number
 }
 
-let B ={ A:{a:true, b: "abc", c:22}} 
+let B = { A:{a:true, b: "abc", c:22}} 
 
-console.log(B);
+// console.log(B);
 
 type manufacture = string;
 
@@ -22,8 +22,6 @@ type manufacture = string;
 
 type MyFunction = () => {
    
-        
-    
 };
 // 
 // console.log(M)
@@ -87,18 +85,19 @@ type Something = Car | Person;
 let x: Something = p as Something;
 
 const outputPersonAge = (person: Person) => {
-    console.log(person.age);
+    console.log("person age", person.age);
 }
 
 const isPerson = (something: Something): something is Person => {
     return !!(something as Person).age;
 }
 
-if (isPerson(x)) {
-    outputPersonAge(x);
-}
 
-console.log(x);
+// if (isPerson(x)) {
+//     outputPersonAge(x);
+// }
+
+// console.log(x);
 
 const car: Car = {name: "",model:"oktavia", speed: 200, engine: {type: "V8", fuelAmount: 40, fuelType: "4"}, manufactore: "skoda"};
 
@@ -115,10 +114,7 @@ export default function ACar(){
 
     return(
         <div>
-            <button >function</button>
-            
+            {/* <button >function</button> */}
         </div>
     )
 }
-
-// className='wrapper' 

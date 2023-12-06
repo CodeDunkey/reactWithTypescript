@@ -16,7 +16,7 @@ import ToDoApp from './TutorialToDo/Main';
 import Container from './Types/Container';
 import Animal from './Types/Animal';
 import MyFunction from './Types/some';
-import MainOut from './Types/MainOut';
+import MyFunction2 from './Types/Some2';
 // 
 function App() {
   
@@ -26,8 +26,9 @@ function App() {
         {/* <ToDoApp /> */}
         {/* {Container()} */}
         {/* {Animal()} */}
-        {/* {MyFunction()} */}
-        {MainOut()}
+        {MyFunction()}
+        {MyFunction2()}
+        {ACar()}
       </>
     </div>
   );

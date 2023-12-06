@@ -57,7 +57,9 @@ type Bb = {
 
 type AnArray = []
 
-
+type CheckFunction1 = ()=>{
+    
+}
 
 
 

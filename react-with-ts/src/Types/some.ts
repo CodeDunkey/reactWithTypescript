@@ -3,32 +3,49 @@ interface Person {
     age: number
 }
 
-let myPerson: Person = {name: "Human", age: 1000}
+let myPerson: Person = { name: "Human", age: 1000 }
 
 interface Car {
     name: string
     model: string
 }
 
-let myCar: Car= {name: "Ford", model: "T"};
+let myCar: Car = { name: "Ford", model: "T" };
+
 type MyObject = Person | Car;
 
+interface Component {
+    description: string
+}
+// if (myPerson){
+//     console.log("myPerson")
+// }
 
-console.log();
+// brug 'in' keyword
+ 
+let testParameter: string = "working";
+const TestFunction = (para = testParameter): string => // with a return type 
+{ return para}
 
-const isCar = (something: MyObject): something is Car => {
-    if((something as Car).model !== undefined)return true 
+// console.log(TestFunction());
+
+// using boolean instead of "parameter 'is' union_type", then the 
+// values of Car can not be individually selected with '.' as in line 46
+const isCar = (something: MyObject): boolean => {
+    if ((something as Car).model !== undefined)return true
     return false
 }
 
 const isPerson = (something: MyObject): something is Person => {
-    if((something as Person).age !== undefined)return true 
+    if ((something as Person).age !== undefined) return true
     return false
 }
 
-export default function MyFunction(para: MyObject){
-    if(isCar(para))console.log(para.model)
-    if(isPerson(para))console.log(para.age)
+function Check1(para: MyObject) {
+    if (isCar(para)) console.log(para)
+    if (isPerson(para)) console.log(para.age)
 }
 
-MyFunction(myPerson);
+export default function MyFunction() {
+    Check1(myCar);
+}
