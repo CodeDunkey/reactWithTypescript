@@ -3,7 +3,7 @@ type Thing1 = {
     shape: string
 }
 
-const t1: Thing1 = {edges: 5, shape: "circle"}
+const t1: Thing1 = {edges: 5, shape: "pentagon"}
 
 interface Thing2 {
     material: string
@@ -14,8 +14,10 @@ const t2: Thing2 = {material: "plastic", isMetal: false}
 
 interface Thing3 {
     name: string
-    
+    isHuman: boolean
 }
+
+const t3: Thing3 = {name: "Rudolph", isHuman: false}
 
 type Choose1 = Thing1 | Thing2;
 

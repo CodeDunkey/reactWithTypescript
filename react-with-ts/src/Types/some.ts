@@ -47,5 +47,5 @@ function Check1(para: MyObject){
 }
 
 export default function MyFunction(){
-    Check1(myPerson)
+    // Check1(myPerson)
 }

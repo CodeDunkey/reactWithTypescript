@@ -17,6 +17,7 @@ import Container from './Types/Container';
 import Animal from './Types/Animal';
 import MyFunction from './Types/some';
 import MyFunction2 from './Types/Some2';
+import Transaction from './Types/Transactions';
 // 
 function App() {
   
@@ -29,6 +30,7 @@ function App() {
         {MyFunction()}
         {MyFunction2()}
         {ACar()}
+        {Transaction()}
       </>
     </div>
   );

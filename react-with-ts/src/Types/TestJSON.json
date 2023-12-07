@@ -1,0 +1,16 @@
+{
+    "testPerson1":
+        {
+    "name": "John",
+    "middle name": null,
+    "age": 100,
+    "alive": true,
+    "addreses": {
+        "somewhere1": "here",
+        "somewhere2": "there",
+        "somewhere3": "everywhere"
+    },
+    "cars": ["Ford", "Skoda", "VW"]
+}    
+
+}
