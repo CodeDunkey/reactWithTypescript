@@ -41,9 +41,11 @@ const isPerson = (something: MyObject): something is Person => {
     return false
 }
 
-export default function MyFunction(para: MyObject){
-    if(isCar(para))console.log(para.model)
+function Check1(para: MyObject){
+    if(isCar(para))console.log(para)
     if(isPerson(para))console.log(para.age)
 }
 
-MyFunction(myPerson);
+export default function MyFunction(){
+    Check1(myPerson)
+}
