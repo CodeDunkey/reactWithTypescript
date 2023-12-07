@@ -33,7 +33,6 @@ interface objectTypes {
     property1: AClass
     property2: Interface
     property3: Array<unknown>
-    // property4: literals
 }
 
 type withoutTypeCheching = any;
