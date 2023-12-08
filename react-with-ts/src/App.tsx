@@ -14,7 +14,7 @@ import Project from './Project/NewProject';
 import ACar from './Types/Car';
 import ToDoApp from './TutorialToDo/Main';
 import Container from './Types/Container';
-import Animal from './Types/Animal';
+import Animal from './Types/TestPerson';
 import MyFunction from './Types/some';
 import MyFunction2 from './Types/Some2';
 import Transaction from './Types/Transactions';

@@ -50,32 +50,30 @@ type Choose_A_Person = TestPerson_1 | TestPerson_2;
 
 const isPerson_1 = (parameter: Choose_A_Person): parameter is TestPerson_1 =>{
     let age = (parameter as TestPerson_1).age;
-    // console.log(age);
+    // console.log("parameter", parameter);
     if(typeof age === "number") {
         console.log("age times two: ",(age as number).valueOf()*2)
     }
+    else if((parameter as TestPerson_1).age === undefined){}
     else console.log("'age' Must be a number!")
     
     return ((parameter as TestPerson_1).age !== undefined)
 } 
-
 // console.log("isPerson_1(testPerson_2)", isPerson_1(testPerson_2))
-
 const isPerson_2 = (parameter: Choose_A_Person): parameter is TestPerson_2 =>{
     return ((parameter as TestPerson_2).employee_id !== undefined)
 }
-
-
 const showPerson = (param: Choose_A_Person) => {
     if(isPerson_1(param))console.log(param.cars)
     if(isPerson_2(param))console.log(param.projects)
 }
 showPerson(testPerson_1);
 
+//////////
+//////////
+
 type Input = unknown;
-
 let input: Input;
-
 const inputCheck = (param: Input) => {
     if(typeof param === "string") {
         console.log((param as string).toUpperCase())
@@ -84,14 +82,8 @@ const inputCheck = (param: Input) => {
         console.log((param as number).valueOf()*2)
     }
     else console.log("not a valid 'type'")
-
-
 }
-
 // inputCheck(4)
-export default function Animal(){
-   
-        
-    
-}
+
+export default function Animal(){}
 
