@@ -1,63 +1,72 @@
-// typescript pre-validates the ts type with the ts compiler.
-
-import { Interface } from "readline";
-import { TupleType } from "typescript";
-
-
-type AnArray = Array<unknown>;
-type Astring = string;
-
-let anArray: AnArray = [];
-const numberA = 2;
-const stringA = "B";
-const boolA = false;
-anArray.push(numberA, stringA, boolA)
-
-anArray.map(item => {
-    console.log("item", item)
-})
-
-class AClass {constructor(parameters: string) {
-    return parameters
-}}
-
-const AaClass: AClass = {para:"abc"}
-console.log("Aaclass", AaClass)
-
-console.log("type of class", typeof(AaClass))
-const sym1 = Symbol("add");
-console.log("sym1",sym1)
-type array2 = Array<unknown>
-
-interface objectTypes {
-    property1: AClass
-    property2: Interface
-    property3: Array<unknown>
+interface TestPerson_1 {
+    name: string
+    middle_name: string | null
+    age: number
+    alive: boolean
+    addresses: {
+        somewhere1: string,
+        somewhere2: string,
+        somewhere3: string
+    }
+    cars: string[]
+}
+let testPerson_1: TestPerson_1 = {
+    name: "John",
+    middle_name: null,
+    age: 100,
+    alive: true,
+    addresses: { somewhere1: "here", somewhere2: "there", somewhere3: "everywhere" },
+    cars: ["Ford", "Skoda", "VW"]
 }
 
-type withoutTypeCheching = any;
 
-type anyWithSomething = unknown;
-
-enum enumType {a, b, c, d}
-
-interface primitiveTypes {
-    propertyType1: number
-    propertyType2: string
-    propertyType3: boolean
-    propertyType4: enumType
-    propertyType5: void
-    propertyType6: null
-    propertyType7: undefined
+interface TestPerson_2 {
+    employee_name: string
+    employee_id: number
+    employement_date: string
+    still_employed: boolean
+     
+    addresses: {
+        somewhere1: string,
+        somewhere2?: string,
+        somewhere3?: string
+    }
+    projects: string[]
+    // function: insæt function her.
+}
+let testPerson_2: TestPerson_2 = {
+    employee_name: "Bob",
+    employee_id: 1243568790,
+    employement_date: "20-02-2020",
+    still_employed: true,
+     
+    addresses: {
+        somewhere1: "Working booth", 
+    },
+    projects: ["Project-1", "Project-a", "Project-#"]
 }
 
-console.log("anArray",anArray)
+type Choose_A_Person = TestPerson_1 | TestPerson_2;
+
+const isPerson_1 = (parameter: Choose_A_Person): parameter is TestPerson_1 =>{
+    // console.log("parameter as TestPerson_1", parameter as TestPerson_1)
+    return ((parameter as TestPerson_1).age !== undefined)
+} 
+// console.log("isPerson_1(testPerson_2)", isPerson_1(testPerson_2))
+const isPerson_2 = (parameter: Choose_A_Person): parameter is TestPerson_2 =>{
+    return ((parameter as TestPerson_2).employee_id !== undefined)
+}
+
+
+function showPerson (param: Choose_A_Person){
+    // console.log(param)
+    if(isPerson_1(param))console.log(param.addresses)
+    if(isPerson_2(param))console.log(param.addresses)
+}
+showPerson(testPerson_2);
 export default function Animal(){
    
-    return(
-        <div>
-            
-        </div>
-    )
+        
+    
 }
 

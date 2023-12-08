@@ -18,6 +18,7 @@ import Animal from './Types/Animal';
 import MyFunction from './Types/some';
 import MyFunction2 from './Types/Some2';
 import Transaction from './Types/Transactions';
+import Types from './Types/Types';
 // 
 function App() {
   
@@ -26,11 +27,12 @@ function App() {
       <>
         {/* <ToDoApp /> */}
         {/* {Container()} */}
-        {/* {Animal()} */}
+        {Animal()}
         {MyFunction()}
-        {MyFunction2()}
-        {ACar()}
-        {Transaction()}
+        {/* {MyFunction2()} */}
+        {/* {ACar()} */}
+        {/* {Transaction()} */}
+        {/* {Types()} */}
       </>
     </div>
   );
