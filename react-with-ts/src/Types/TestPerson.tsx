@@ -39,7 +39,6 @@ let testPerson_2: TestPerson_2 = {
     employee_id: 1243568790,
     employement_date: "20-02-2020",
     still_employed: true,
-     
     addresses: {
         somewhere1: "Working booth", 
     },
@@ -50,13 +49,23 @@ type Choose_A_Person = TestPerson_1 | TestPerson_2;
 
 const isPerson_1 = (parameter: Choose_A_Person): parameter is TestPerson_1 =>{
     let age = (parameter as TestPerson_1).age;
-    // console.log("parameter", parameter);
-    if(typeof age === "number") {
-        console.log("age times two: ",(age as number).valueOf()*2)
-    }
+    if(typeof age === "number") {console.log("age times two: ",(age as number).valueOf()*2)}
     else if((parameter as TestPerson_1).age === undefined){}
     else console.log("'age' Must be a number!")
     
+    let car = (parameter as TestPerson_1).cars.map((item) => {
+        // console.log(item)
+        if(typeof item === "string") {console.log("car", item)}
+        else if((parameter as TestPerson_1).cars === undefined){}
+        else console.log("'car' must be a string")
+    });
+    
+
+    let alive = (parameter as TestPerson_1).alive;
+    if(typeof alive === "boolean") {console.log("alive", alive)}
+    else if((parameter as TestPerson_1).alive === undefined){}
+    else console.log("'age' Must be a number!")
+
     return ((parameter as TestPerson_1).age !== undefined)
 } 
 // console.log("isPerson_1(testPerson_2)", isPerson_1(testPerson_2))
